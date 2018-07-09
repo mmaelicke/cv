@@ -1,2 +1,13 @@
-<app-header></app-header>
+<p *ngIf="!dataLoaded">
+  waiting for connection to Firebase
+</p>
+<ng-container *ngIf="dataLoaded">
+  <!-- Header Component -->
+  <app-header></app-header>
+
+  <!-- Main Area -->
+  <app-main></app-main>
+</ng-container>
+
+
 
