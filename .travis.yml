@@ -16,6 +16,4 @@ install:
 script:
   - yarn lint
   - yarn build --base-href https://mmaelicke.github.io
-
-deploy:
   - angular-cli-ghpages --repo=https://GH_TOKEN@github.com/mmaelicke/mmaelicke.github.io.git
