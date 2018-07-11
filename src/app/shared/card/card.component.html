@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header" [ngClass]="headerBg"
+       [style.cursor]="'pointer'"
+       [style.color]="((headerBg === 'bg-light') || (headerBg) === 'bg-default') ? 'black' : 'white'"
+       (click)="collapsed = !collapsed">
+    {{ header }}
+  </div>
+  <div class="card-body" [ngClass]="bodyBg"
+       [style.color]="((bodyBg === 'bg-light') || (bodyBg) === 'bg-default') ? 'black' : 'white'"
+       *ngIf="!collapsed">
+    <ng-content></ng-content>
+  </div>
+</div>

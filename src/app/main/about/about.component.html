@@ -1,3 +1,15 @@
-<p>
-  about works!
-</p>
+<div class="row">
+  <div class="col col-xs-12">
+    <p>Intro Text</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col col-xs-12">
+    <card header="Personal Information" [collapsed]="false" headerBg="bg-primary" bodyBg="bg-light">
+      <table class="table table-striped">
+        <tr><td> Date of Birth:</td><td>{{ birthday | date: 'dd LLLL yyyy' }}</td></tr>
+        <tr><td>Place of Birth:</td><td>{{ birthplace }}</td></tr>
+      </table>
+    </card>
+  </div>
+</div>

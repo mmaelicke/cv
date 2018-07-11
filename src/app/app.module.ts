@@ -16,6 +16,7 @@ import {RouterModule} from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {VerticalTimelineModule} from 'angular-vertical-timeline';
 import { SectionComponent } from './main/cv/section/section.component';
+import { CardComponent } from './shared/card/card.component';
 
 const routes = [
   {path: 'cv', component: CvComponent},
@@ -35,6 +36,7 @@ const routes = [
     AboutComponent,
     NotFoundComponent,
     SectionComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
