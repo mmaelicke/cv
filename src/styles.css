@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import "~angular-vertical-timeline/dist/vertical-timeline.css";
 
 body {
   font-family: 'Ubuntu', sans-serif;

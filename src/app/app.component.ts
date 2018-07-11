@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   dataLoaded = false;
 
   constructor(private data: DataService) {
-    this.data.getInfo();
+    this.data.getData();
 
     // subscribe to loaded
     this.data.loaded.subscribe(

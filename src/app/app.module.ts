@@ -14,6 +14,8 @@ import { AboutComponent } from './main/about/about.component';
 import {DataService} from './shared/data.service';
 import {RouterModule} from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {VerticalTimelineModule} from 'angular-vertical-timeline';
+import { SectionComponent } from './main/cv/section/section.component';
 
 const routes = [
   {path: 'cv', component: CvComponent},
@@ -31,14 +33,16 @@ const routes = [
     ImageComponent,
     CvComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SectionComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AngularFontAwesomeModule,
-    RouterModule.forRoot(routes, {useHash: false})
+    RouterModule.forRoot(routes, {useHash: false}),
+    VerticalTimelineModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

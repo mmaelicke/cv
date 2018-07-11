@@ -2,6 +2,12 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject} from 'rxjs';
 import {Info} from './info.model';
+import {Cv} from './cv.model';
+
+interface StaticContents {
+  cv: Cv;
+  info: Info;
+}
 
 @Injectable()
 export class DataService {
@@ -10,16 +16,18 @@ export class DataService {
 
   // loaded info data
   info: Info;
+  cv: Cv;
 
 
   constructor(private http: HttpClient) {}
 
 
-  getInfo() {
-    this.http.get(this.baseUrl + '/info.json').subscribe(
-      (value: Info) => {
+  getData() {
+    this.http.get(this.baseUrl + '/static.json').subscribe(
+      (value: StaticContents) => {
         console.log(value);
-        this.info = value;
+        this.info = value.info;
+        this.cv = value.cv;
 
         // emit a new loaded status
         this.loaded.next(true);
@@ -32,5 +40,4 @@ export class DataService {
       }
     );
   }
-
 }
