@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "10"
+
+dist: "trusty"
+sudo: false
+
+cache:
+  directories:
+    - "node_modules"
+
+install:
+  - npm install -g yarn
+  - yarn add angular-cli-ghpages
+
+script:
+  - yarn lint
+  - yarn build --base-href https://mmaelicke.github.io
+
+deploy:
+  - angular-cli-ghpages --repo=https://GH_TOKEN@github.com/mmaelicke/mmaelicke.github.io.git
