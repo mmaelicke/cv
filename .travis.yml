@@ -11,9 +11,16 @@ cache:
 
 install:
   - npm install -g yarn
-  - yarn add angular-cli-ghpages
 
 script:
   - yarn lint
   - yarn build --base-href https://mmaelicke.github.io
-  - angular-cli-ghpages --repo=https://GH_TOKEN@github.com/mmaelicke/mmaelicke.github.io.git
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  local_dir: dist/cv
+  repo: mmaelicke/mmaelicke.github.io.git
+  on:
+    branch: master
