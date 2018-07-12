@@ -3,10 +3,12 @@ import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject} from 'rxjs';
 import {Info} from './info.model';
 import {Cv} from './cv.model';
+import {Settings} from './settings.model';
 
 interface StaticContents {
   cv: Cv;
   info: Info;
+  settings: Settings;
 }
 
 @Injectable()
@@ -17,6 +19,7 @@ export class DataService {
   // loaded info data
   info: Info;
   cv: Cv;
+  settings: Settings;
 
 
   constructor(private http: HttpClient) {}
@@ -28,6 +31,7 @@ export class DataService {
         console.log(value);
         this.info = value.info;
         this.cv = value.cv;
+        this.settings = value.settings;
 
         // emit a new loaded status
         this.loaded.next(true);

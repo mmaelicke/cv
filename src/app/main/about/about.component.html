@@ -5,11 +5,11 @@
 </div>
 <div class="row">
   <div class="col col-xs-12">
-    <card header="Personal Information" [collapsed]="false" headerBg="bg-primary" bodyBg="bg-light">
+    <app-card header="Personal Information" [collapsed]="false" headerBg="bg-primary" bodyBg="bg-light">
       <table class="table table-striped">
         <tr><td> Date of Birth:</td><td>{{ birthday | date: 'dd LLLL yyyy' }}</td></tr>
         <tr><td>Place of Birth:</td><td>{{ birthplace }}</td></tr>
       </table>
-    </card>
+    </app-card>
   </div>
 </div>

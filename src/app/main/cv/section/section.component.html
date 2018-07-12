@@ -4,12 +4,14 @@
   </div>
   <div class="row card-body" *ngIf="!collapsed">
     <div class="col col-xs-12">
-      <vertical-timeline-card *ngFor="let e of contents" [dateValue]="e.from | date: 'LLLL yyyy'" [timeString]="e.until | date: 'yyyy'">
-        <br>
-        <h3>{{ e.title }}</h3>
-        <h5><i>{{ e.qualification }}</i></h5>
-        <p [innerHTML]="e.body"></p>
-      </vertical-timeline-card>
+      <vertical-timeline>
+        <vertical-timeline-card *ngFor="let e of contents" [dateValue]="e.from | date: 'LLLL yyyy'" [timeString]="e.until | date: 'yyyy'">
+          <br>
+          <h3>{{ e.title }}</h3>
+          <h5><i>{{ e.qualification }}</i></h5>
+          <p [innerHTML]="e.body"></p>
+        </vertical-timeline-card>
+      </vertical-timeline>
     </div>
   </div>
 
