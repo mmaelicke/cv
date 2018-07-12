@@ -1,17 +1,17 @@
 language: node_js
 node_js:
-  - "10"
+  - "9"
 
 dist: "trusty"
 sudo: false
 
 cache:
+  yarn: true
   directories:
     - "node_modules"
 
 install:
-  - npm install -g @angular/cli
-  - npm install -g yarn
+  - yarn global add @angular/cli
 
 script:
   - yarn lint
