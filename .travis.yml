@@ -11,7 +11,7 @@ cache:
     - "node_modules"
 
 install:
-  - yarn global install @angular/cli
+  - yarn add @angular/cli
   - yarn install --production=false
 
 script:
