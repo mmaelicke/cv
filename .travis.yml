@@ -6,12 +6,12 @@ dist: "trusty"
 sudo: false
 
 cache:
+  yarn: true
   directories:
     - "node_modules"
 
 install:
-  - npm install -g @angular/cli
-  - npm install -g yarn
+  - yarn global install @angular/cli
 
 script:
   - yarn lint
