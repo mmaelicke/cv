@@ -12,6 +12,7 @@ cache:
 
 install:
   - yarn global install @angular/cli
+  - yarn install --production=false
 
 script:
   - yarn lint
